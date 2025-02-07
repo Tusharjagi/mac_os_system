@@ -1,0 +1,168 @@
+{
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2016
+  },
+  "parser": "@babel/eslint-parser",
+  "overrides": [
+    {
+      "env": {
+        "node": true,
+        "es6": true,
+        "jest": true
+      },
+      "files": ["**/*.test.js", ".eslintrc.{js,cjs}", "*.{html, htm, json}"]
+    }
+  ],
+
+  "plugins": [
+    "react-hooks",
+    "tailwindcss",
+    "react",
+    "eslint-plugin-prettier",
+    "check-file",
+
+    "@html-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "next",
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:@next/next/recommended",
+    "plugin:@html-eslint/recommended"
+  ],
+  "rules": {
+    "react/prop-types": "error",
+    "react/no-unused-prop-types": "warn",
+    "max-lines": [
+      "error",
+      {
+        "max": 300,
+        "skipBlankLines": true,
+        "skipComments": true
+      }
+    ],
+    "@html-eslint/id-naming-convention": [
+      "error",
+      "regex",
+      {
+        "pattern": "snake_case"
+      }
+    ],
+    "func-name-matching": ["error", "always"],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "check-file/folder-match-with-fex": [
+      "error",
+      {
+        "*.test.{js}": "**/__test__/",
+        "*.{json}": "/*"
+      }
+    ],
+    "@next/next/no-img-element": "off",
+    "no-case-declarations": "error",
+    "no-unused-vars": "error",
+    "no-undef": "error",
+    "@html-eslint/quotes": "warn",
+    "no-use-before-define": "error",
+    "@html-eslint/no-duplicate-id": "error",
+    "@html-eslint/no-duplicate-attrs": "error",
+    "@html-eslint/require-closing-tags": "error",
+    "@html-eslint/no-inline-styles": "error",
+    "@html-eslint/no-multiple-h1": "error",
+    "@html-eslint/require-lang": "error",
+    "@html-eslint/lowercase": "off",
+    "@html-eslint/require-button-type": "error",
+    "require-jsdoc": [
+      "error",
+      {
+        "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "ClassDeclaration": true,
+          "ArrowFunctionExpression": true,
+          "FunctionExpression": true
+        }
+      }
+    ],
+    "no-empty-function": "off",
+    "camelcase": "off",
+    "@html-eslint/require-meta-charset": "error",
+    "@html-eslint/sort-attrs": [
+      "error",
+      {
+        "priority": ["id", "type", "class", "style"]
+      }
+    ],
+    "@html-eslint/no-positive-tabindex": "error",
+    "@html-eslint/indent": ["error", "tab"],
+    "react/jsx-key": [
+      "error",
+      {
+        "checkKeyMustBeforeSpread": true,
+        "warnOnDuplicates": true
+      }
+    ],
+    "react/jsx-no-duplicate-props": "error",
+    "react/hook-use-state": [
+      "error",
+      {
+        "allowDestructuredState": true
+      }
+    ],
+    "react/destructuring-assignment": [
+      "error",
+      "always",
+      {
+        "ignoreClassFields": false,
+        "destructureInSignature": "always"
+      }
+    ],
+    "react/jsx-boolean-value": [
+      "error",
+      "always",
+      {
+        "assumeUndefinedIsFalse": false
+      }
+    ],
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
+    "react/boolean-prop-naming": [
+      "error",
+      {
+        "rule": "^(is|has)[A-Z]([A-Za-z]?)+"
+      }
+    ],
+    "react/jsx-handler-names": [
+      "error",
+      {
+        "eventHandlerPrefix": "on",
+        "eventHandlerPropPrefix": "on",
+        "checkLocalVariables": true,
+        "checkInlineFunction": true
+      }
+    ],
+    "callback-return": ["error", ["done", "send.error", "send.success"]],
+    "check-file/filename-naming-convention": [
+      "error",
+      {
+        "src/app/**/*.jsx": "CAMEL_CASE",
+        "src/components/**/*.test.js": "CAMEL_CASE"
+      },
+      {
+        "ignoreMiddleExtensions": true
+      }
+    ]
+  }
+}
