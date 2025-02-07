@@ -1,12 +1,12 @@
 import { Inter } from "next/font/google";
-import "../../styles/globals.css";
+import "../styles/globals.css";
 import ReduxProvider from "../store/providers/reduxProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "File Explorer",
-  description: "Mac OS File Explorer",
+  title: "Mac OS",
+  description: "Mac OS System",
 };
 
 export default function RootLayout({ children }) {
