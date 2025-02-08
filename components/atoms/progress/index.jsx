@@ -25,7 +25,7 @@ const Progress = forwardRef(({ progress, className, barColor = "black", ...restP
     >
       <div
         className={cn(
-          "rounded-ful absolute left-0 top-0 h-full rounded-full transition-all duration-1000 ease-out will-change-transform",
+          "absolute left-0 top-0 h-full rounded-full transition-all duration-1000 ease-out will-change-transform",
           colorMap[barColor],
         )}
         style={{ width: `${width}%` }}

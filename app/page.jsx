@@ -1,9 +1,5 @@
-import ProgressDemo from "@/components/loading-screen/index";
+import LoadingScreen from "@/template/loading-screen/index";
 
 export default function Home() {
-  return (
-    <div className="w-lvh grid h-lvh place-content-center">
-      <ProgressDemo />
-    </div>
-  );
+  return <LoadingScreen />;
 }
