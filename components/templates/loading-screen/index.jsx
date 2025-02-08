@@ -19,7 +19,7 @@ const LoadingScreen = () => {
         setIsFadingOut(true);
         setTimeout(() => {
           if (!isCancelled) setIsVisible(false);
-        }, 500);
+        }, 300);
         return;
       }
 
